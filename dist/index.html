@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Tangerine">
+    <title>Recipes Finder</title>
+</head>
+<body>
+
+
+    <script id="meals-template" type="text/x-handlebars-template">
+        {{#each meal}}
+          <div class="mealDiv">
+            <a class="title" href={{href}}>{{title}}</a>
+
+            <br>
+              <img class="image" src={{thumbnail}}>
+
+              <div class="ingredients">
+                  <span>ingredients</span>
+                  <br>
+              {{#each ingredients}}
+                <li>{{this}}</li>
+                {{/each}}
+            </div>
+          </div>
+      {{/each}}
+     </script>
+
+     
+    
+    <input id="input" type="text" placeholder="ingeridient"><button id="btn">Search!</button>
+    <div id="meals"></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+
+    <script
+  src="https://code.jquery.com/jquery-3.5.0.js"
+  integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+  crossorigin="anonymous"></script>
+
+     <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

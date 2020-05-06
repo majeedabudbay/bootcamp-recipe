@@ -1,0 +1,42 @@
+#meals{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "m m m";
+    grid-gap: 10px;
+    
+}
+
+.mealDiv{
+    background-color: 	#F0E68C;
+}
+
+.meal{
+    grid-area: "m";
+    display: grid;
+    grid-template-rows: 1fr 1fr  1fr;
+    grid-template-areas: 
+    "t"
+    "i"
+    "g";
+    align-items: center;
+    justify-items: center;
+}
+.title{
+    grid-area: "t";
+    font-family: 'Tangerine', serif;
+    font-size: 48px;
+    justify-items: center;
+}
+
+.image{
+    grid-area: "i";
+    justify-items: center;
+    height: 200px;
+    width: 250px;
+}
+.ingredients{
+    grid-area: "g";
+    font-family: 'Tangerine', serif;
+    font-size: 48px;
+    justify-items: center;
+}
